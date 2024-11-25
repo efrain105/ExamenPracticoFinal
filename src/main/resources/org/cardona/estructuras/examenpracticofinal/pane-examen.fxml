@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="567.0" prefWidth="598.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cardona.estructuras.examenpracticofinal.controllers.listasDoblesC.ListaDobleAppController">
+    <VBox fx:id="box" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="567.0" prefWidth="598.0">
+        <children>
+            <Pane fx:id="ventanaprincipal" prefHeight="567.0" prefWidth="879.0" stylesheets="@/style.css">
+                <children>
+                    <Button fx:id="goEliminar" layoutX="324.0" layoutY="404.0" onAction="#onEliminar" prefHeight="40.0" prefWidth="187.0" styleClass="boton" text="Eliminar Usuario" />
+                    <Button fx:id="goVaciarLista" layoutX="324.0" layoutY="273.0" onAction="#onVaciarLista" prefHeight="40.0" prefWidth="187.0" styleClass="boton" text="Vaciar Lista" />
+                    <Button fx:id="goDestruir" layoutX="324.0" layoutY="207.0" onAction="#onDestruirLista" prefHeight="40.0" prefWidth="187.0" styleClass="boton" text="Destruir Lista" />
+                    <Button fx:id="goAgregarUsuario" layoutX="88.0" layoutY="273.0" mnemonicParsing="false" onAction="#onGoAgregarUsuario" prefHeight="40.0" prefWidth="187.0" text="Agregar usuario" />
+                    <Button layoutX="88.0" layoutY="207.0" onAction="#crearLista" prefHeight="40.0" prefWidth="187.0" styleClass="boton" text="Crear Lista" />
+                    <Label fx:id="menuTitulo" alignment="CENTER" layoutX="130.0" layoutY="27.0" prefHeight="62.0" prefWidth="343.0" text="Examen Final" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+
+                    </Label>
+                    <Button fx:id="goModificarUsuario" layoutX="88.0" layoutY="404.0" mnemonicParsing="false" onAction="#OnGoModificarUsuario" prefHeight="40.0" prefWidth="187.0" text="Modificar " />
+               <Label layoutX="175.0" layoutY="89.0" prefHeight="27.0" prefWidth="252.0" text="BRAULIO ESQUIVEL PRECIADO" textFill="WHITE">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+               </Label>
+               <Button fx:id="goBuscar" layoutX="88.0" layoutY="333.0" mnemonicParsing="false" onAction="#onGoBuscar" prefHeight="40.0" prefWidth="187.0" text="Buscar Usuarios" />
+               <Button fx:id="goInvertir" layoutX="324.0" layoutY="333.0" onAction="#onInvertirLista" prefHeight="40.0" prefWidth="187.0" styleClass="boton" text="Invertir Orden" />
+               <Button fx:id="goRecorrerLista" layoutX="121.0" layoutY="469.0" onAction="#onRecorrerLista" prefHeight="40.0" prefWidth="361.0" styleClass="boton" text="Recorrer Lista" />
+               <Label layoutX="183.0" layoutY="124.0" prefHeight="27.0" prefWidth="252.0" text="CARDONA DE LUNA EFRAIN" textFill="WHITE">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+               </Label>
+                </children>
+            </Pane>
+        </children>
+    </VBox>
+</AnchorPane>

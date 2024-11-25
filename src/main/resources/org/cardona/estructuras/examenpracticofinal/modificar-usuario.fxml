@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="615.0" prefWidth="414.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cardona.estructuras.examenpracticofinal.controllers.listasDoblesC.ModificarUsuarioController">
+    <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="615.0" prefWidth="414.0">
+        <children>
+            <Pane fx:id="ventanaprincipal" prefHeight="618.0" prefWidth="414.0" stylesheets="@/style.css">
+                <children>
+
+                    <Label fx:id="menuTitulo" alignment="CENTER" prefHeight="43.0" prefWidth="422.0" text="Modificar Usuario" textFill="WHITE" />
+                    <VBox alignment="CENTER" layoutX="32.0" layoutY="53.0" prefHeight="506.0" prefWidth="358.0" spacing="20.0">
+                        <children>
+                            <VBox alignment="CENTER" fillWidth="false" prefHeight="58.0" prefWidth="260.0">
+                                <children>
+                                    <Label alignment="CENTER" prefHeight="77.0" prefWidth="162.0" text="Tipo Usuario" textAlignment="CENTER" textFill="WHITE">
+                                        <font>
+                                            <Font size="18.0" />
+                                        </font>
+                                    </Label>
+                                    <ComboBox fx:id="tipoUsuario" onAction="#onTipoUsuarioSeleccionado" prefHeight="35.0" prefWidth="180.0">
+                                        <items>
+                                            <FXCollections fx:factory="observableArrayList">
+                                                <String fx:value="Cliente" />
+                                                <String fx:value="Empleado" />
+                                                <String fx:value="Proveedor" />
+                                            </FXCollections>
+                                        </items>
+                                    </ComboBox>
+                                </children>
+                            </VBox>
+
+                            <!-- Campos Comunes -->
+                            <VBox alignment="CENTER" fillWidth="false" prefHeight="58.0" prefWidth="260.0">
+                                <children>
+                                    <Label alignment="CENTER" prefHeight="77.0" prefWidth="162.0" text="Telefono" textAlignment="CENTER" textFill="WHITE">
+                                        <font>
+                                            <Font size="18.0" />
+                                        </font>
+                                    </Label>
+                                    <TextField fx:id="telefono" prefHeight="35.0" prefWidth="180.0" />
+                                </children>
+                            </VBox>
+                            <VBox alignment="CENTER" fillWidth="false" prefHeight="68.0" prefWidth="249.0">
+                                <children>
+                                    <Label alignment="CENTER" prefHeight="77.0" prefWidth="162.0" text="Correo" textAlignment="CENTER" textFill="WHITE">
+                                        <font>
+                                            <Font size="18.0" />
+                                        </font>
+                                    </Label>
+                                    <TextField fx:id="correo" prefHeight="35.0" prefWidth="180.0" />
+                                </children>
+                            </VBox>
+                            <VBox alignment="CENTER" fillWidth="false" prefHeight="61.0" prefWidth="246.0">
+                                <children>
+                                    <Label alignment="CENTER" prefHeight="77.0" prefWidth="162.0" text="Nombres" textAlignment="CENTER" textFill="WHITE">
+                                        <font>
+                                            <Font size="18.0" />
+                                        </font>
+                                    </Label>
+                                    <TextField fx:id="nombre" prefHeight="35.0" prefWidth="180.0" />
+                                </children>
+                            </VBox>
+
+                            <!-- StackPane para Campos Adicionales -->
+                            <StackPane fx:id="camposAdicionales" prefHeight="100.0" prefWidth="260.0">
+                                <!-- Contenedor para Libro -->
+                                <VBox fx:id="clienteContainer" alignment="CENTER" spacing="10.0" visible="false">
+                                    <VBox alignment="CENTER" fillWidth="false">
+                                        <Label alignment="CENTER" text="Direccion" textFill="WHITE">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </Label>
+                                        <TextField fx:id="direccion" prefHeight="35.0" />
+                                    </VBox>
+                                    <VBox alignment="CENTER" fillWidth="false">
+                                        <Label alignment="CENTER" text="Tipo de Cliente" textFill="WHITE">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </Label>
+                                        <ComboBox fx:id="tipoCliente" prefHeight="35.0" prefWidth="180.0" />
+                                    </VBox>
+                                </VBox>
+
+                                <!-- Contenedor para Revista -->
+                                <VBox fx:id="empleadoContainer" alignment="CENTER" spacing="10.0" visible="false">
+                                    <VBox alignment="CENTER" fillWidth="false">
+                                        <Label alignment="CENTER" text="Puesto" textFill="WHITE">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </Label>
+                                        <ComboBox fx:id="puesto" prefHeight="35.0" prefWidth="180.0" />
+                                    </VBox>
+                                    <VBox alignment="CENTER" fillWidth="false">
+                                        <Label alignment="CENTER" text="Salario" textFill="WHITE">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </Label>
+                                        <TextField fx:id="salario" prefHeight="35.0" />
+                                    </VBox>
+                                </VBox>
+
+                                <!-- Contenedor para Artículo -->
+                                <VBox fx:id="proveedorContainer" alignment="CENTER" spacing="10.0" visible="false">
+                                    <VBox alignment="CENTER" fillWidth="false">
+                                        <Label alignment="CENTER" text="Empresa" textFill="WHITE">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </Label>
+                                        <ComboBox fx:id="empresa" prefHeight="35.0" prefWidth="180.0" />
+                                    </VBox>
+                                    <VBox alignment="CENTER" fillWidth="false">
+                                        <Label alignment="CENTER" text="Producto" textFill="WHITE">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </Label>
+                                        <ComboBox fx:id="producto" prefHeight="35.0" prefWidth="180.0" />
+                                    </VBox>
+                                </VBox>
+                            </StackPane>
+
+                            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                                <children>
+                                    <Button fx:id="modificar" contentDisplay="TOP" mnemonicParsing="false" onAction="#onModificar" prefHeight="22.0" prefWidth="108.0" text="Modificar" />
+                                    <Button fx:id="regresar" mnemonicParsing="false" onAction="#onRegresar" prefHeight="22.0" prefWidth="111.0" text="Regresar" />
+                                </children>
+                            </HBox>
+                        </children>
+                    </VBox>
+                </children>
+            </Pane>
+        </children>
+    </VBox>
+</AnchorPane>

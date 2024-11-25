@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="478.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cardona.estructuras.examenpracticofinal.controllers.listasDoblesC.RecorrerNodosController">
+    <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="478.0">
+        <children>
+            <Pane fx:id="ventanaprincipal" prefHeight="600.0" prefWidth="1000.0" stylesheets="@/style.css">
+                <children>
+
+                    <Label fx:id="menuTitulo" alignment="CENTER" layoutX="28.0" layoutY="34.0" prefHeight="43.0" prefWidth="422.0" text="Recorrer Nodos" textFill="WHITE" />
+                    <TextArea fx:id="outPutArea" editable="false" layoutX="67.0" layoutY="99.0" prefHeight="261.0" prefWidth="343.0" style="-fx-font-family: 'Courier New'; -fx-font-size: 12px; -fx-padding: 10px;" />               <HBox layoutX="98.0" layoutY="454.0" prefHeight="54.0" prefWidth="280.0" spacing="40.0">
+                  <children>
+                     <Button fx:id="primero" mnemonicParsing="false" onAction="#OnPrimero" prefHeight="40.0" prefWidth="120.0" text="Primero" />
+                            <Button fx:id="ultimo" mnemonicParsing="false" onAction="#OnUltimo" prefHeight="40.0" prefWidth="120.0" text="Ultimo" />
+                  </children>
+               </HBox>
+               <HBox layoutX="98.0" layoutY="383.0" prefHeight="54.0" prefWidth="280.0" spacing="40.0">
+                  <children>
+                            <Button fx:id="anterior" contentDisplay="TOP" mnemonicParsing="false" onAction="#OnAnterior" prefHeight="40.0" prefWidth="120.0" text="Anterior" />
+                            <Button fx:id="siguiente" mnemonicParsing="false" onAction="#OnSiguiente" prefHeight="40.0" prefWidth="120.0" text="Siguiente" />
+                  </children>
+               </HBox>
+               <HBox layoutX="98.0" layoutY="523.0" prefHeight="54.0" prefWidth="280.0" spacing="40.0">
+                  <children>
+                            <Button fx:id="todos" mnemonicParsing="false" onAction="#OnTodos" prefHeight="40.0" prefWidth="120.0" text="Todos" />
+                            <Button fx:id="regresar" mnemonicParsing="false" onAction="#onRegresar" prefHeight="40.0" prefWidth="120.0" text="Regresar" />
+                  </children>
+               </HBox>
+                </children>
+            </Pane>
+        </children>
+    </VBox>
+</AnchorPane>
